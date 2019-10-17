@@ -2,15 +2,13 @@
   <div class="container padding paddingTopBottom">
     <div class="row">
       <div class="col-8">
-        <div class="autocomplete">
-          <input type="search" id="search" name="search" placeholder="Type here to search...">
-        </div>
+        <input type="search" id="search" name="search" onkeyup="searchAndFilter()" placeholder="Type here to search...">
       </div>
     </div>
     <div class="row">
-      <ul class="grid-list">
+      <ul id="museum-list" class="grid-list">
         {{#each museums}}
-        <li class="grid-item">
+        <li class="grid-item" data-title="{{this.title}}">
           <div class="grid-content grid-content-link">
             <div class="grid-image">
               <img src="{{this.image.url}}">

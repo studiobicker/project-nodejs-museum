@@ -31,51 +31,32 @@ if (gridItems) {
   });
 }
 
-window.onload = async function() {
+const searchAndFilter = () => {
   const searchField = document.getElementById("search");
   if (searchField) {
-    searchField.onkeyup = findMuseum();
-  }
-  async function findMuseum() {
-    debugger;
-    clearList();
-
-    const searchString = document.getElementById("search").value;
-    const autocompleteItems = document.getElementById("autocomplete-items");
-
-    let museumArray = await getMuseums(searchString);
-    if (museumArray) {
-      for (let i = 0; i < museumArray.length; i++) {
-        let suggestion = document.createElement("DIV");
-        suggestion.innerHTML += museumArray[i].title;
-        suggestion.innerHTML += `<input type="hidden" value="${museumArray[i].title}"></div>`;
-        suggestion.addEventListener("click", function(e) {
-          /*insert the value for the autocomplete text field:*/
-          document.getElementById("search").value = this.getElementsByTagName(
-            "input"
-          )[0].value;
-          /*close the list of autocompleted values,
-          (or any other open lists of autocompleted values:*/
-          clearList();
-        });
-        autocompleteItems.appendChild(suggestion);
+    const searchStr = searchField.value.toUpperCase();
+    const items = document.querySelectorAll("[data-title]");
+    for (let i = 0; i < items.length; i++) {
+      const title = items[i].getAttribute("data-title");
+      if (title.toUpperCase().indexOf(searchStr) > -1) {
+        items[i].style.display = "";
+      } else {
+        items[i].style.display = "none";
       }
     }
   }
-
-  async function getMuseums(searchString) {
-    try {
-      debugger;
-      const response = await axios.get(
-        `museums/search/?museum=${searchString}`
-      );
-      return response.data;
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  function clearList() {
-    document.getElementById("autocomplete-items").innerHTML = "";
-  }
 };
+
+async function getMuseums(searchString) {
+  try {
+    debugger;
+    const response = await axios.get(`museums/search/?museum=${searchString}`);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function clearList() {
+  document.getElementById("autocomplete-items").innerHTML = "";
+}

@@ -4,6 +4,15 @@
   flex-direction: column;
 }
 
+#admin {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  @include media(desktop) {
+    flex-direction: row;
+  }
+}
+
 .site-main {
   flex: 1;
 }

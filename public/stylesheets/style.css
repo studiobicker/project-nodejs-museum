@@ -723,6 +723,14 @@ input[type="search"]::placeholder {
   min-height: 100vh;
   flex-direction: column; }
 
+#admin {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    #admin {
+      flex-direction: row; } }
+
 .site-main {
   flex: 1; }
 

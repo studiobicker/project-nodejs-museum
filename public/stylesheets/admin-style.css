@@ -500,8 +500,7 @@ h2 {
 /* Typography
 --------------------------------------------- */
 body {
-  background: #fffefa;
-  /* Fallback for when there is no custom background color defined. */ }
+  background: #f3f0e9; }
 
 hr {
   background-color: #000;
@@ -723,6 +722,14 @@ input[type="search"]::placeholder {
   min-height: 100vh;
   flex-direction: column; }
 
+#admin {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    #admin {
+      flex-direction: row; } }
+
 .site-main {
   flex: 1; }
 
@@ -809,3 +816,170 @@ input[type="search"]::placeholder {
     .paddingTopBottom {
       padding-top: 50px;
       padding-bottom: 50px; } }
+
+.site-header {
+  padding-left: 17px;
+  padding-right: 17px;
+  background-color: #000; }
+  @media only screen and (min-width: 768px) {
+    .site-header {
+      padding-left: 27px;
+      padding-right: 27px; } }
+  @media only screen and (min-width: 1200px) {
+    .site-header {
+      padding-left: 69px;
+      padding-right: 69px; } }
+
+.site-header.toggledOn {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
+
+.site-header nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5; }
+
+nav ul {
+  list-style: none;
+  margin: 0; }
+
+.logo {
+  width: 215px;
+  fill: #000; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      width: 300px; } }
+  @media only screen and (min-width: 1200px) {
+    .logo {
+      width: 320px; } }
+
+.toggledOn .logo {
+  fill: #fffefa; }
+
+.hamburger-menu {
+  order: 1;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer; }
+  @media only screen and (min-width: 992px) {
+    .hamburger-menu {
+      display: none; } }
+
+.hamburger-menu span {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #fffefa; }
+
+.toggledOn .hamburger-menu span:first-child {
+  background-color: #fffefa;
+  transition: 0.5s;
+  transform: rotate(-45deg);
+  top: 50%; }
+
+.toggledOn .hamburger-menu span:nth-child(2) {
+  display: none; }
+
+.toggledOn .hamburger-menu span:last-child {
+  background-color: #fffefa;
+  transition: 0.5s;
+  transform: rotate(45deg);
+  bottom: 30%; }
+
+.main-navigation {
+  order: 2; }
+
+.user-navigation {
+  order: 3; }
+
+.menu {
+  width: 100%;
+  display: none; }
+  @media only screen and (min-width: 992px) {
+    .menu {
+      display: flex;
+      width: auto; } }
+
+.toggledOn .menu {
+  margin-top: 50px;
+  display: block; }
+
+.menu li a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000; }
+  @media only screen and (min-width: 992px) {
+    .menu li a {
+      font-size: 20px;
+      padding: 0 10px; } }
+  @media only screen and (min-width: 1200px) {
+    .menu li a {
+      font-size: 24px; } }
+
+.menu li.menu-sep {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  display: none; }
+  @media only screen and (min-width: 992px) {
+    .menu li.menu-sep {
+      display: block; } }
+
+.menu li a:hover {
+  opacity: 0.75; }
+
+.toggledOn .menu li a {
+  color: #fffefa;
+  line-height: 2; }
+
+.toggledOn .user__item .avatar {
+  display: none; }
+
+@media only screen and (min-width: 992px) {
+  .submenu {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    z-index: 5;
+    right: 20px;
+    padding-top: 15px; }
+    .submenu:before {
+      border-style: solid;
+      content: "";
+      position: absolute; }
+    .submenu:before {
+      border-color: #000 transparent;
+      border-width: 0 10px 10px;
+      left: 52%;
+      top: 6px; } }
+
+@media only screen and (min-width: 992px) {
+  .submenu li a {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 16px;
+    color: #fffefa;
+    background-color: #000; } }
+
+.user__item:hover .submenu {
+  display: block; }

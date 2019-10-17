@@ -98,7 +98,7 @@ h2 {
 --------------------------------------------- */
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-alternate;
 }
 
 hr {
@@ -159,5 +159,5 @@ table {
 }
 
 @import "forms";
-
 @import "layout";
+@import "admin-siteheader";
