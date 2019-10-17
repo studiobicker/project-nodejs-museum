@@ -1,0 +1,28 @@
+<main class="site-main">
+  <div class="container padding paddingTopBottom">
+    <div class="row">
+      <div class="col-8">
+        <div class="autocomplete">
+          <input type="search" id="search" name="search" placeholder="Type here to search...">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="grid-list">
+        {{#each museums}}
+        <li class="grid-item">
+          <div class="grid-content grid-content-link">
+            <div class="grid-image">
+              <img src="{{this.image.url}}">
+            </div>
+            <div class=" grid-details">
+              <h2><a href="/museums/{{this.id}}">{{this.title}}</a></h2>
+              <p>{{this.description}}</p>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</main>

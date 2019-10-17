@@ -1,0 +1,24 @@
+<main class="site-main">
+  <input type="hidden" id="route" value="museums">
+  <div class="container mapbox">
+    <div class="row reverse">
+      <div class="col-6">
+        <div id="map"></div>
+      </div>
+      <div class="col-6 padding paddingTopBottom">
+        <div class="museumlist">
+          <ul>
+            {{#each museums}}
+            <li><a href="/museums/{{this.id}}">{{this.title}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/maps.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC21s39IJLbY-TJD9yYPPEkqGyDxR2oO7E&callback=initMap">
+  </script>

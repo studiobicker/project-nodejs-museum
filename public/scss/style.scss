@@ -1,0 +1,509 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+
+/* Typography
+--------------------------------------------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $color__text-main;
+  font-family: $font__main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  @include media(tablet) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  color: $color__link;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $color__link-hover;
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+}
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: $font__main;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  @include media(tablet) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-family: $font__main;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.museum-title {
+  font-family: $font__main;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  @include media(tablet) {
+    font-size: 40px;
+  }
+}
+
+.museum-title.light {
+  color: $color__text-light;
+}
+
+.section-title {
+  font-family: $font__main;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* Typography
+--------------------------------------------- */
+
+body {
+  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+  background-color: $color__background-hr;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+//Lists
+ul,
+ol {
+  margin: 0 0 24px 16px;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 24px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+dl {
+  margin: 0 0 24px;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 0 1.75em;
+}
+
+img,
+svg {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+//Tables
+table {
+  margin: 0 0 24px;
+  width: 100%;
+}
+
+.avatar img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+@import "forms";
+
+@import "layout";
+
+@import "siteheader";
+
+@import "sitemain";
+
+@import "sitefooter";
+
+/* Grid
+--------------------------------------------- */
+.grid-list {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+}
+.grid-list li.grid-item {
+  flex: 0 1 33.33333%;
+  display: flex;
+}
+
+.grid-content {
+  margin: 15px;
+  background: $color__background-alternate;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.grid-content-link {
+  cursor: pointer;
+}
+.grid-content-link:hover {
+  background-color: $color__background-highlight;
+}
+
+.grid-image img {
+  display: block;
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.grid-item .grid-details {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+}
+.review-header-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.review-author {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+.review-created {
+  font-size: 14px;
+  font-weight: 400;
+}
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+.review-rating .star {
+  color: #deb217;
+  font-size: 0;
+}
+.review-rating .star:before {
+  content: "\2605";
+  font-size: 20px;
+}
+.review-action {
+  display: flex;
+  justify-content: flex-end;
+}
+.review-action a {
+  font-weight: 700;
+  padding: 0 5px;
+}
+
+/* List
+--------------------------------------------- */
+
+.list {
+  list-style: none;
+}
+
+.list .list-item {
+  background-color: $color__background-alternate;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.list-item .list-image {
+  flex: 0 1 40%;
+}
+.list-item .list-details {
+  flex: 0 1 60%;
+}
+
+.list-image img {
+  display: block;
+}
+
+/* Index
+--------------------------------------------- */
+
+.artwork {
+  position: relative;
+  margin-bottom: 40px;
+  @include media(tablet) {
+    margin-bottom: 80px;
+  }
+}
+
+.artwork:after {
+  @include media(desktop) {
+    position: absolute;
+    content: "";
+    top: 50px;
+    left: -70px;
+    width: calc(100% + 70px);
+    height: 100%;
+    opacity: 1;
+    background-color: $color__background-alternate;
+    z-index: -1;
+  }
+}
+
+.artwork img {
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+  @include media(desktop) {
+    height: 100%;
+  }
+}
+
+.intro {
+  padding-top: 0;
+  @include media(desktop) {
+    padding-top: 7%;
+  }
+}
+
+/* Museums on Map
+--------------------------------------------- */
+.mapbox {
+  background-color: $color__background-alternate;
+}
+
+.museumlist {
+  @include media(desktop) {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+.museumlist ul {
+  margin: 0;
+  list-style: none;
+}
+
+#map {
+  height: 100%;
+}
+
+/* Single Museum
+--------------------------------------------- */
+.museum-image {
+  position: relative;
+  background-color: #e5e0d9;
+  background-size: cover;
+  background-position: 50%;
+}
+.museum-image:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 35%;
+}
+.museum-content {
+  max-width: 1440px;
+}
+
+.museum-description {
+  background-color: $color__background-alternate;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  @include media(tablet) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  @include media(wide) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -120px;
+  }
+}
+.museum-aside {
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  @include media(tablet) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  @include media(wide) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.add-list {
+  margin-bottom: 28px;
+}
+
+ul.address,
+ul.website {
+  list-style: none;
+  margin-left: 0;
+  position: relative;
+}
+
+ul.address::before,
+ul.website::before {
+  background: transparent url("../images/placeholder-filled-point.svg") scroll 0
+    0 no-repeat;
+  content: "";
+  position: absolute;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  top: 4px;
+}
+
+ul.website::before {
+  background: transparent url("../images/world-wide-web.svg") scroll 0 0
+    no-repeat;
+  background-size: 20px 20px;
+}
+
+ul.address li,
+ul.website li {
+  padding-left: 30px;
+}
+
+ul.website li a {
+  border-bottom: 2px solid $color__link;
+}
+
+.reviews {
+  margin-top: 80px;
+  max-width: 1440px;
+}
+
+.reviews .grid-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Review
+--------------------------------------------- */
+.review {
+  max-width: 800px;
+}
+.review-museum-image img {
+  display: block;
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+}
+.review-museum-details {
+  background: $color__background-dark;
+  padding: 15px 30px;
+}
+.review-museum-details .museum-title {
+  margin-bottom: 0;
+}
+
+/* Profile
+--------------------------------------------- */
+.profile {
+  background-color: $color__background-alternate;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/* My list
+--------------------------------------------- */
+.my-list__actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.my-list__icon {
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+  margin-right: 0.625rem;
+  border-radius: 100px;
+  border: 1px solid $color__border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+.my-list__icon:hover {
+  background: $color__background-dark;
+}
+.my-list__icon:hover svg {
+  fill: $color__text-light;
+}
+.my-list__icon svg {
+  width: 20px;
+}
+
+.my-list__icon.count {
+  background: $color__background-dark;
+  color: $color__text-light;
+  cursor: default;
+}

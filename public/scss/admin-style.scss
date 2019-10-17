@@ -1,0 +1,163 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+
+/* Typography
+--------------------------------------------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $color__text-main;
+  font-family: $font__main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  @include media(tablet) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  color: $color__link;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $color__link-hover;
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+}
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: $font__main;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  @include media(tablet) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-family: $font__main;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.museum-title {
+  font-family: $font__main;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  @include media(tablet) {
+    font-size: 40px;
+  }
+}
+
+.museum-title.light {
+  color: $color__text-light;
+}
+
+.section-title {
+  font-family: $font__main;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* Typography
+--------------------------------------------- */
+
+body {
+  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+  background-color: $color__background-hr;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+//Lists
+ul,
+ol {
+  margin: 0 0 24px 16px;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 24px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+dl {
+  margin: 0 0 24px;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 0 1.75em;
+}
+
+img,
+svg {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+//Tables
+table {
+  margin: 0 0 24px;
+  width: 100%;
+}
+
+.avatar img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+@import "forms";
+
+@import "layout";

@@ -1,0 +1,35 @@
+/* Colors
+--------------------------------------------- */
+$color__background-body: #fffefa;
+$color__background-alternate: #f3f0e9;
+$color__background-highlight: #e5e0d9;
+$color__background-hr: #000;
+$color__background-dark: #000;
+$color__text-main: #000;
+$color__text-light: #fffefa;
+$color__border: #000;
+$color__link: #000;
+$color__link-visited: #000;
+$color__link-hover: #000;
+$color__menu: #000;
+$color__background-nav-mobile: #000;
+$color__background-submenu: #000;
+$color__menu-toggled: #fffefa;
+$color__error: #ed213a;
+$color__input-border: #d8d8d8;
+$color__input-border-focus: #999;
+$color__input-placeholder: #ccc;
+
+/* Fonts
+--------------------------------------------- */
+
+$font__main: "Roboto", sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+
+/* Responsive widths.
+--------------------------------------------- */
+$mobile_width: 576px;
+$tablet_width: 768px;
+$desktop_width: 992px;
+$wide_width: 1200px;

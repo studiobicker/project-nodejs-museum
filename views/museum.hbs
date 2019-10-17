@@ -1,0 +1,133 @@
+<main class="site-main">
+  <div class="museum-image" style="background-image:url({{museum.image.url}})">
+  </div>
+
+  <div class="museum-content container padding">
+    <div class="row">
+      <div class="museum-description col-8 padding">
+        <h1>{{museum.title}}</h1>
+        {{#if museum.longdescription }}
+        {{{museum.longdescription}}}
+        {{else}}
+        {{{museum.description}}}
+        {{/if}}
+      </div>
+      <div class="museum-aside col-4 padding">
+        <div class="add-list">
+          {{#ifIn museum.id user.mylist}}
+          <a href="/mylist/remove/{{museum.id}}" class="iconBtn light-button">Remove from my list
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" width="20px" height="20px" viewBox="0 0 95.939 95.939"
+              style="enable-background:new 0 0 95.939 95.939;" xml:space="preserve">
+              <g>
+                <path d="M62.819,47.97l32.533-32.534c0.781-0.781,0.781-2.047,0-2.828L83.333,0.586C82.958,0.211,82.448,0,81.919,0
+		c-0.53,0-1.039,0.211-1.414,0.586L47.97,33.121L15.435,0.586c-0.75-0.75-2.078-0.75-2.828,0L0.587,12.608
+		c-0.781,0.781-0.781,2.047,0,2.828L33.121,47.97L0.587,80.504c-0.781,0.781-0.781,2.047,0,2.828l12.02,12.021
+		c0.375,0.375,0.884,0.586,1.414,0.586c0.53,0,1.039-0.211,1.414-0.586L47.97,62.818l32.535,32.535
+		c0.375,0.375,0.884,0.586,1.414,0.586c0.529,0,1.039-0.211,1.414-0.586l12.02-12.021c0.781-0.781,0.781-2.048,0-2.828L62.819,47.97
+		z" />
+              </g>
+            </svg>
+          </a>
+          {{else}}
+          <a href="/mylist/add/{{museum.id}}" class="iconBtn light-button">Add to my list
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" width="26px" height="26px" viewBox="0 0 124.065 124.065"
+              style="enable-background:new 0 0 124.065 124.065;" xml:space="preserve">
+              <g>
+                <path d="M12.532,77.057c7.7,10.2,17.7,18.4,28.1,25.801c0,0,12.4,8.6,18.1,12.6c2.1,1.4,4.799,1.4,6.799,0c5.7-4,18-12.6,18-12.6
+		c10.4-7.4,20.2-15.5,28-25.801c6.601-8.8,11.5-19.2,12.4-30.2c1.6-20-11.3-39.2-32.7-39.2c-12.5,0-23.5,6.8-29.1,16.9
+		c-5.8-10.2-16.7-17-29.2-17c-21.3,0-34.4,19.2-32.8,39.2C1.032,57.757,5.832,68.257,12.532,77.057z" />
+              </g>
+            </svg>
+          </a>
+          {{/ifIn}}
+        </div>
+        <ul class="address">
+          <li><strong>{{museum.title}}</strong></li>
+          <li>{{museum.location.address}}</li>
+          <li>{{museum.location.zipcode}} {{museum.location.city}}</li>
+        </ul>
+        <ul class="website">
+          <li><a href={{museum.url}} target="_blank">visit website</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <div class="reviews container padding">
+    <div class="grid-header">
+      <h2 class="section-title">REVIEWS</h2>
+      <a href="/reviews/add/{{museum.id}}" class="dark-button">Write a review <svg version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="add-icon" x="0px" y="0px"
+          width="94.49px" height="94.49px" viewBox="0 0 94.49 94.49" style="enable-background:new 0 0 94.49 94.49;"
+          xml:space="preserve">
+          <g>
+            <path d="M92.49,35.284H59.206V2c0-1.104-0.896-2-2-2H37.284c-1.104,0-2,0.896-2,2v33.284H2c-1.104,0-2,0.896-2,2v19.922
+		c0,1.104,0.896,2,2,2h33.284V92.49c0,1.104,0.896,2,2,2h19.922c1.104,0,2-0.896,2-2V59.206H92.49c1.104,0,2-0.896,2-2V37.284
+		C94.49,36.18,93.596,35.284,92.49,35.284z" />
+          </g>
+        </svg></a>
+    </div>
+    <div class="row">
+      {{#if museum.reviews}}
+      <ul class="grid-list">
+        {{#each museum.reviews}}
+        <li class="grid-item">
+          <div class="grid-content">
+            <div class="grid-details">
+              <div class="review-header">
+                <div class="avatar">
+                  {{#if this.author.profileImg}}
+                  <img src="/images/profile/{{this.author.profileImg}}" alt="">
+                  {{else}}
+                  <svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+                      <g id="Desktop-HD-Amsterdam-Museum" transform="translate(-1302.000000, -54.000000)"
+                        stroke="#000000">
+                        <g id="header" transform="translate(70.000000, 41.000000)">
+                          <g id="user" transform="translate(1233.000000, 14.000000)">
+                            <g id="Group">
+                              <circle id="Oval" stroke-width="2" cx="25" cy="25" r="25"></circle>
+                              <path
+                                d="M25,31 C32.9460504,31 39.5392136,36.7923984 40.7873709,44.3850766 C36.4826457,47.8954035 30.9871003,50 25,50 C19.0130281,50 13.5175899,47.8954937 9.21309437,44.3858901 C10.4607864,36.7923984 17.0539496,31 25,31 Z"
+                                id="Path" stroke-width="2"></path>
+                              <circle id="Oval" stroke-width="2" cx="24.5" cy="19.5" r="9.5"></circle>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  {{/if}}
+                </div>
+
+                <div class="review-header-details">
+                  <div class="review-author">
+                    {{#if this.author.firstname}}{{this.author.firstname}}{{else}}{{this.author.username}}{{/if}}</div>
+                  <div class="review-created">{{moment this.created "fromNow"}}</div>
+                </div>
+              </div>
+              <div class="review-content">
+                <div class="review-rating">
+                  {{#times this.rating}}
+                  <span class="star">*</span>
+                  {{/times}}
+                </div>
+                <div class="review-text">{{this.text}}</div>
+                <div class="review-action">
+                  <a href="/reviews/edit/{{this.id}}">Edit</a>|<a href="/reviews/remove/{{this.id}}">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p>Be the first to write a review</p>
+      {{/if}}
+    </div>
+  </div>
+</main>
