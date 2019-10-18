@@ -733,6 +733,10 @@ input[type="search"]::placeholder {
 .site-main {
   flex: 1; }
 
+#admin .site-main {
+  padding-top: 17px;
+  padding-bottom: 17px; }
+
 .vcenter {
   display: flex;
   align-items: center; }
@@ -821,14 +825,11 @@ input[type="search"]::placeholder {
   padding-left: 17px;
   padding-right: 17px;
   background-color: #000; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     .site-header {
-      padding-left: 27px;
-      padding-right: 27px; } }
-  @media only screen and (min-width: 1200px) {
-    .site-header {
-      padding-left: 69px;
-      padding-right: 69px; } }
+      padding-left: 0;
+      padding-right: 0;
+      min-width: 200px; } }
 
 .site-header.toggledOn {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -854,23 +855,17 @@ input[type="search"]::placeholder {
   justify-content: space-between;
   align-items: center;
   z-index: 5; }
+  @media only screen and (min-width: 992px) {
+    .site-header nav {
+      display: block; } }
+
+.site-header .logo {
+  display: flex;
+  justify-content: center; }
 
 nav ul {
   list-style: none;
   margin: 0; }
-
-.logo {
-  width: 215px;
-  fill: #000; }
-  @media only screen and (min-width: 768px) {
-    .logo {
-      width: 300px; } }
-  @media only screen and (min-width: 1200px) {
-    .logo {
-      width: 320px; } }
-
-.toggledOn .logo {
-  fill: #fffefa; }
 
 .hamburger-menu {
   order: 1;
@@ -905,19 +900,15 @@ nav ul {
   transform: rotate(45deg);
   bottom: 30%; }
 
-.main-navigation {
-  order: 2; }
-
-.user-navigation {
-  order: 3; }
-
 .menu {
   width: 100%;
   display: none; }
   @media only screen and (min-width: 992px) {
     .menu {
       display: flex;
-      width: auto; } }
+      width: auto;
+      display: block;
+      margin-top: 20px; } }
 
 .toggledOn .menu {
   margin-top: 50px;
@@ -926,60 +917,34 @@ nav ul {
 .menu li a {
   font-size: 24px;
   font-weight: 700;
-  color: #000; }
+  color: #fffefa; }
   @media only screen and (min-width: 992px) {
     .menu li a {
-      font-size: 20px;
+      font-size: 16px;
       padding: 0 10px; } }
-  @media only screen and (min-width: 1200px) {
-    .menu li a {
-      font-size: 24px; } }
-
-.menu li.menu-sep {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000;
-  display: none; }
-  @media only screen and (min-width: 992px) {
-    .menu li.menu-sep {
-      display: block; } }
 
 .menu li a:hover {
   opacity: 0.75; }
 
 .toggledOn .menu li a {
-  color: #fffefa;
   line-height: 2; }
 
-.toggledOn .user__item .avatar {
-  display: none; }
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  border-bottom: 1px solid #999; }
 
-@media only screen and (min-width: 992px) {
-  .submenu {
-    display: none;
-    position: absolute;
-    min-width: 200px;
-    z-index: 5;
-    right: 20px;
-    padding-top: 15px; }
-    .submenu:before {
-      border-style: solid;
-      content: "";
-      position: absolute; }
-    .submenu:before {
-      border-color: #000 transparent;
-      border-width: 0 10px 10px;
-      left: 52%;
-      top: 6px; } }
+.menu__item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
-@media only screen and (min-width: 992px) {
-  .submenu li a {
-    display: flex;
-    align-items: center;
-    padding: 16px 20px;
-    font-size: 16px;
-    color: #fffefa;
-    background-color: #000; } }
+.menu__item svg {
+  margin-bottom: 10px; }
 
-.user__item:hover .submenu {
-  display: block; }
+.crud-container {
+  width: 100%;
+  background-color: #fffefa; }

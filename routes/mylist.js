@@ -3,11 +3,13 @@ const router = express.Router();
 
 const User = require("../models/User");
 
+require("dotenv").config();
+
 router.get("/", async (req, res, next) => {
   try {
     const user = await User.findById(req.session.user._id).populate("mylist");
     if (user) {
-      res.render("mylist", { user: user });
+      res.render("mylist", { user: user, mapKey: process.env.MAP_KEY });
     }
   } catch (err) {
     next(err);

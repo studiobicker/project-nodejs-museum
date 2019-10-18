@@ -734,6 +734,10 @@ input[type="search"]::placeholder {
 .site-main {
   flex: 1; }
 
+#admin .site-main {
+  padding-top: 17px;
+  padding-bottom: 17px; }
+
 .vcenter {
   display: flex;
   align-items: center; }

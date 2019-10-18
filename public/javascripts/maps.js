@@ -50,6 +50,7 @@ async function initMap() {
   map.setMapTypeId("styled_map");
 
   const route = document.getElementById("route").value;
+  debugger;
   let museumArray = await getMuseums(route);
   debugger;
   // Create a <script> tag and set the USGS URL as the source.

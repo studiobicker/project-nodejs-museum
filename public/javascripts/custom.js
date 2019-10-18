@@ -47,15 +47,15 @@ const searchAndFilter = () => {
   }
 };
 
-async function getMuseums(searchString) {
-  try {
-    debugger;
-    const response = await axios.get(`museums/search/?museum=${searchString}`);
-    return response.data;
-  } catch (err) {
-    console.log(err);
-  }
-}
+// async function getMuseums(searchString) {
+//   try {
+//     debugger;
+//     const response = await axios.get(`museums/search/?museum=${searchString}`);
+//     return response.data;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
 function clearList() {
   document.getElementById("autocomplete-items").innerHTML = "";

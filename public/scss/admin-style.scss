@@ -161,3 +161,8 @@ table {
 @import "forms";
 @import "layout";
 @import "admin-siteheader";
+
+.crud-container {
+  width: 100%;
+  background-color: $color__background-body;
+}

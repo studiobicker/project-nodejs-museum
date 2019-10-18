@@ -139,6 +139,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/public/images/arrow-back.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/arrow-back.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/public/images/arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -154,6 +164,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/public/images/cross.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/public/images/dashboard.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/dashboard.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -240,6 +260,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/public/images/museum.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/museum.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/public/images/placeholder-filled-point.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -301,11 +331,31 @@
 		"oAP": "/public/images/profile/fd84fac5dbff48d0f7b679eb4b0d8be6",
 		"oF": 0
 		},
+	"/public/images/reviews.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/reviews.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/public/images/user.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/public/images/user.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/public/images/users.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/users.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -615,6 +665,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/views/admin.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/views/admin.hbs",
+		"oF": 0
 		},
 	"/views/adminLayout.hbs": {
 		"cB": 0,

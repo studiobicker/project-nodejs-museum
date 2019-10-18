@@ -15,6 +15,10 @@
             </div>
             <div class=" grid-details">
               <h2><a href="/museums/{{this.id}}">{{this.title}}</a></h2>
+              <div class="rating">{{#if this.reviews}}
+
+                {{#getAvg this.reviews}}o{{/getAvg}} {{this.reviews.length}} review(s){{/if}}
+              </div>
               <p>{{this.description}}</p>
             </div>
           </div>

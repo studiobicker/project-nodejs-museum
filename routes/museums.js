@@ -5,9 +5,13 @@ const Museum = require("../models/Museum");
 const Review = require("../models/Review");
 const User = require("../models/User");
 
+require("dotenv").config();
+
 router.get("/", async (req, res, next) => {
   try {
-    const museums = await Museum.find().sort({ title: 1 });
+    const museums = await Museum.find()
+      .populate("reviews")
+      .sort({ title: 1 });
     res.render("museums", { museums: museums });
   } catch (err) {
     next(err);
@@ -41,7 +45,7 @@ router.get("/feed", async (req, res, next) => {
 router.get("/map", async (req, res, next) => {
   try {
     const museums = await Museum.find().sort({ title: 1 });
-    res.render("map", { museums: museums });
+    res.render("map", { museums: museums, mapKey: process.env.MAP_KEY });
   } catch (err) {
     next(err);
   }

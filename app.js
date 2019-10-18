@@ -73,12 +73,40 @@ hbs.registerHelper("ifIn", function(elem, list, options) {
   return options.inverse(this);
 });
 hbs.registerHelper("times", function(n, block) {
-  var accum = "";
-  for (var i = 0; i < n; ++i) accum += block.fn(i);
+  let accum = "";
+  for (let i = 0; i < n; ++i) {
+    debugger;
+    accum += block.fn(i);
+  }
+  debugger;
   return accum;
 });
 hbs.registerHelper("ifEquals", function(arg1, arg2, options) {
   return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+});
+hbs.registerHelper("getAvg", function(list) {
+  debugger;
+  let total = 0;
+  for (let i = 0; i < list.length; i++) {
+    total += list[i].rating;
+  }
+  const avg = Math.round((total / list.length) * 10) / 10;
+  const fullstars = Math.floor(avg);
+
+  let stars = "";
+  for (let x = 0; x < fullstars; x++) {
+    stars += `<i class="fas fa-star"></i>`;
+  }
+  let halfstars = 0;
+  if (avg > fullstars) {
+    halfstars = 1;
+    stars += `<i class="fas fa-star-half-alt"></i>`;
+  }
+  let emptystars = 5 - fullstars - halfstars;
+  for (let y = 0; y < emptystars; y++) {
+    stars += `<i class="far fa-star"></i>`;
+  }
+  return stars;
 });
 
 momentHandler.registerHelpers(hbs);
