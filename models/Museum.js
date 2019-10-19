@@ -16,7 +16,8 @@ const museumSchema = new Schema({
   url: String,
   image: {
     url: String,
-    main: String
+    main: String,
+    internal: { type: Boolean, default: false }
   },
   rated: Number,
   reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],

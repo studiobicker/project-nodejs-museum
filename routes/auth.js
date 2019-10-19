@@ -12,7 +12,6 @@ router.get("/register", (req, res, next) => {
 
 /* Post signup page. */
 router.post("/register", async (req, res, next) => {
-  debugger;
   const { username, password, firstname } = req.body;
   try {
     if (username && password) {
@@ -50,7 +49,6 @@ router.post("/login", async (req, res, next) => {
   const { username, password } = req.body;
   try {
     if (username && password) {
-      debugger;
       const user = await User.findOne({ username });
       if (user) {
         const correctPassword = await bcrypt.compare(

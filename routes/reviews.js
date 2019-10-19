@@ -6,14 +6,8 @@ const User = require("../models/User");
 const Review = require("../models/Review");
 
 async function isFirstReview(req, res, next) {
-  // find Museum, populate reviews. if userId is not in museum.reviews.userid
   try {
-    // const musea = await Museum.findById(req.params.id).populate({
-    //   path: "reviews",
-    //   select: "author",
-    //   match: { author: req.session.user._id }
-    // });
-
+    debugger;
     const museum = await Museum.findById(req.params.id).populate({
       path: "reviews",
       populate: {
@@ -21,7 +15,7 @@ async function isFirstReview(req, res, next) {
       }
     });
     for (let i = 0; i < museum.reviews.length; i++) {
-      if (museum.reviews[0].author.id === req.session.user._id) {
+      if (museum.reviews[i].author.id === req.session.user._id) {
         next(createError(403));
         return false;
       }
@@ -51,7 +45,6 @@ router.get("/add/:id", isFirstReview, async (req, res, next) => {
 });
 
 router.post("/add", async (req, res, next) => {
-  debugger;
   const { text, rating, museumId } = req.body;
 
   // the user id (which we need to establish as relation) we get from the session

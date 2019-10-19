@@ -161,8 +161,41 @@ table {
 @import "forms";
 @import "layout";
 @import "admin-siteheader";
+@import "gridlist";
 
 .crud-container {
   width: 100%;
+  margin-top: 20px;
+  padding: 25px;
   background-color: $color__background-body;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.05);
+}
+
+.crud-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.crud-container td,
+.crud-container th {
+  border: none;
+  padding: 8px;
+}
+
+.crud-container tr:nth-child(even) {
+  background-color: $color__background-alternate;
+}
+
+.crud-container th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a8a19b;
+}
+
+/* Edit museum
+--------------------------------------------- */
+.museum .list-item {
+  display: flex;
+  flex-wrap: flex;
 }

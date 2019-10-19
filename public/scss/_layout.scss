@@ -40,11 +40,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .col-6 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @include media(desktop) {
     flex: 0 0 50%;
     max-width: 50%;
@@ -54,6 +58,8 @@
 .col-8 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @include media(desktop) {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
@@ -62,6 +68,8 @@
 .col-4 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @include media(desktop) {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -71,6 +79,8 @@
 .col-7 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @include media(desktop) {
     flex: 0 0 62.5%;
     max-width: 62.5%;
@@ -80,6 +90,8 @@
 .col-5 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @include media(desktop) {
     flex: 0 0 37.5%;
     max-width: 37.5%;

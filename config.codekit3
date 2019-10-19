@@ -129,105 +129,37 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/public/images/add.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/add.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
+	"/partials/dashboardSVG.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/partials/dashboardSVG.hbs",
+		"oF": 0
 		},
-	"/public/images/arrow-back.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/arrow-back.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
+	"/partials/museumSVG.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/partials/museumSVG.hbs",
+		"oF": 0
 		},
-	"/public/images/arrow.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/arrow.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
+	"/partials/reviewsSVG.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/partials/reviewsSVG.hbs",
+		"oF": 0
 		},
-	"/public/images/cross.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/cross.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/dashboard.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/dashboard.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/delete-button.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/delete-button.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/happiness.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/happiness.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/heart.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/heart.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/like.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/like.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/link-button.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/link-button.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
+	"/partials/usersSVG.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/partials/usersSVG.hbs",
+		"oF": 0
 		},
 	"/public/images/logo.svg": {
 		"ft": 2097152,
@@ -260,15 +192,53 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/public/images/museum.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/museum.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
+	"/public/images/museums/091a332972b4186405d838d185cf3ccb": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/091a332972b4186405d838d185cf3ccb",
+		"oF": 0
+		},
+	"/public/images/museums/0d7b8e247841a5216ff924a39bec5869": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/0d7b8e247841a5216ff924a39bec5869",
+		"oF": 0
+		},
+	"/public/images/museums/2b74f678c23aeac6da6beccf4de84336": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/2b74f678c23aeac6da6beccf4de84336",
+		"oF": 0
+		},
+	"/public/images/museums/2d271f4a34ff43a19250317faeb12bda": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/2d271f4a34ff43a19250317faeb12bda",
+		"oF": 0
+		},
+	"/public/images/museums/6dbe02e4d14a39e62dd1cd8bbedd517c": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/6dbe02e4d14a39e62dd1cd8bbedd517c",
+		"oF": 0
+		},
+	"/public/images/museums/b0732560c74f035187652f0446b3db2d": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public/images/museums/b0732560c74f035187652f0446b3db2d",
+		"oF": 0
 		},
 	"/public/images/placeholder-filled-point.svg": {
 		"ft": 2097152,
@@ -279,17 +249,6 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
-		},
-	"/public/images/placeholder-museum.jpg": {
-		"ft": 16384,
-		"iS": 168596,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/public/images/placeholder-museum.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
 		},
 	"/public/images/profile/7397ac1e7b79fc27bf0dd1737429c2e3": {
 		"cB": 0,
@@ -331,31 +290,11 @@
 		"oAP": "/public/images/profile/fd84fac5dbff48d0f7b679eb4b0d8be6",
 		"oF": 0
 		},
-	"/public/images/reviews.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/reviews.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
 	"/public/images/user.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/public/images/user.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/public/images/users.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/public/images/users.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -415,6 +354,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/public/scss/_forms.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/public/scss/_gridlist.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/public/scss/_gridlist.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -666,12 +618,36 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/views/admin.hbs": {
+	"/views/about.hbs": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/views/admin.hbs",
+		"oAP": "/views/about.hbs",
+		"oF": 0
+		},
+	"/views/admin/dashboard.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/views/admin/dashboard.hbs",
+		"oF": 0
+		},
+	"/views/admin/museum.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/views/admin/museum.hbs",
+		"oF": 0
+		},
+	"/views/admin/museums.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/views/admin/museums.hbs",
 		"oF": 0
 		},
 	"/views/adminLayout.hbs": {
@@ -696,14 +672,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/views/auth/register.hbs",
-		"oF": 0
-		},
-	"/views/dashboard.hbs": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/views/dashboard.hbs",
 		"oF": 0
 		},
 	"/views/error.hbs": {

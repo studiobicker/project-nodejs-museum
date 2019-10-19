@@ -1,0 +1,38 @@
+<main class="site-main">
+  <div class="container padding">
+    <h1 class="section-title">{{title}}</h1>
+  </div>
+
+  <div class="container padding">
+    <div class="crud-container museum">
+      <div class="list-item">
+        <div class="list-image">
+          {{#if museum.image.internal}}
+          <img src="/images/museums/{{museum.image.url}}" alt="">
+          {{else}}
+          <img src="{{museum.image.url}}" alt="">
+          {{/if}}
+        </div>
+        <div class="list-details padding">
+          <form action="/admin/museum/updateImg" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="museumId" value={{museum.id}}>
+            <input type="file" name="museumImg" />
+            <input type="submit" value="save">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container padding">
+    <div class="crud-container">
+      change museum
+    </div>
+  </div>
+  <div class="container padding">
+    <div class="crud-container">
+      change reviews
+    </div>
+  </div>
+
+</main>

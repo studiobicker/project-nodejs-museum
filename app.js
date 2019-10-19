@@ -72,13 +72,18 @@ hbs.registerHelper("ifIn", function(elem, list, options) {
   }
   return options.inverse(this);
 });
+hbs.registerHelper("confirmAuthor", function(author, currentUser, options) {
+  debugger;
+  if (author === currentUser) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 hbs.registerHelper("times", function(n, block) {
   let accum = "";
   for (let i = 0; i < n; ++i) {
-    debugger;
     accum += block.fn(i);
   }
-  debugger;
   return accum;
 });
 hbs.registerHelper("ifEquals", function(arg1, arg2, options) {

@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex,nofollow">
   <title>{{title}} | {{h.siteName}}</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/f2f2098e3f.js" crossorigin="anonymous"></script>
   <link rel='stylesheet' href='/stylesheets/admin-style.css' />
 </head>
 
@@ -30,118 +30,20 @@
         </div>
         <ul class="menu admin-navigation">
           <li class="menu__item"><a href="/admin">
-              <svg width="60px" height="42px" viewBox="0 0 60 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <g id="Desktop-HD-dashboard" transform="translate(-67.000000, -160.000000)" stroke="#FFFEFA"
-                    stroke-width="2">
-                    <g id="dashboard" transform="translate(0.000000, 128.000000)">
-                      <g id="Group-23" transform="translate(68.000000, 33.000000)">
-                        <path
-                          d="M32,29 C32,31.209 30.208,33 28,33 C25.792,33 24,31.209 24,29 C24,26.791 25.792,25 28,25 C30.208,25 32,26.791 32,29 Z"
-                          id="Stroke-1"></path>
-                        <path d="M30.8262,26.1738 L43.0002,13.9998" id="Stroke-3"></path>
-                        <path d="M4.0435,30.2607 L9.0865,30.2607" id="Stroke-5"></path>
-                        <path d="M51.9561,30.2637 L46.9131,30.2607" id="Stroke-7"></path>
-                        <path d="M50.1318,19.834 L45.4718,21.762" id="Stroke-9"></path>
-                        <path d="M37.167,6.8682 L35.237,11.5272" id="Stroke-11"></path>
-                        <path d="M28,5.043 L28,10.088" id="Stroke-13"></path>
-                        <path d="M18.834,6.8682 L20.763,11.5272" id="Stroke-15"></path>
-                        <path d="M11.062,12.0596 L14.625,15.6276" id="Stroke-17"></path>
-                        <path d="M5.8682,19.832 L10.5272,21.762" id="Stroke-19"></path>
-                        <path d="M29,0 C12.983,0 0,12.985 0,29 L0,40 L58,40 L58,29 C58,12.985 45.017,0 29,0 Z"
-                          id="Stroke-21"></path>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg><span>Dashboard</span></a></li>
+              {{> dashboardSVG }}
+              <span>Dashboard</span></a></li>
           <li class="menu__item"><a href="/admin/museums">
-              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <g id="Desktop-HD-dashboard" transform="translate(-70.000000, -274.000000)" stroke="#FFFEFA"
-                    stroke-width="2">
-                    <g id="museums" transform="translate(0.000000, 253.000000)">
-                      <g id="Group-18" transform="translate(71.000000, 22.000000)">
-                        <polygon id="Stroke-1" points="4 52 54 52 54 46 4 46"></polygon>
-                        <polygon id="Stroke-2" points="8 46 50 46 50 20 8 20"></polygon>
-                        <g id="Group-7" transform="translate(0.000000, 51.000000)">
-                          <path d="M58,7 L0,7" id="Stroke-3"></path>
-                          <path d="M58,1 L0,1" id="Stroke-5"></path>
-                        </g>
-                        <path d="M12,20 L12,46" id="Stroke-8"></path>
-                        <path d="M24,20 L24,46" id="Stroke-9"></path>
-                        <path d="M20,20 L20,46" id="Stroke-10"></path>
-                        <path d="M34,20 L34,46" id="Stroke-11"></path>
-                        <path d="M38,20 L38,46" id="Stroke-12"></path>
-                        <path d="M46,20 L46,46" id="Stroke-13"></path>
-                        <g id="Group-17" transform="translate(2.000000, 0.000000)">
-                          <polygon id="Stroke-14" points="0 20 54 20 54 14 0 14"></polygon>
-                          <polygon id="Stroke-16" points="54 14 0 14 27 0"></polygon>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              Museums</a></li>
+              {{> museumSVG }}
+              <span>Museums</span></a></li>
           <li class="menu__item"><a href="/admin/reviews">
-              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-                  <g id="Desktop-HD-dashboard" transform="translate(-69.000000, -402.000000)" stroke="#FFFEFA"
-                    stroke-width="2">
-                    <g id="reviews" transform="translate(0.000000, 378.000000)">
-                      <g id="Group-5" transform="translate(70.000000, 25.000000)">
-                        <path
-                          d="M24,43 C21.374,42.852 18.545,42.267 16.391,41.609 L2,48 L7.565,36.565 C2.701,32.675 0,27.43 0,21.435 C0,9.596 11.491,0 26,0 C40.51,0 52.956,9.597 52.956,21.435 C52.956,22.751 52.809,24.04 52.525,25.29"
-                          id="Stroke-1"></path>
-                        <polygon id="Stroke-3"
-                          points="44 30 49 40 58 40 50.435 46.652 54 58 44.13 51.073 34.043 58 37.826 46.652 30 40 39 40">
-                        </polygon>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
+              {{> reviewsSVG }}
               Reviews</a></li>
           <li class="menu__item"><a href="/admin/users">
-              <svg width="60px" height="53px" viewBox="0 0 60 53" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-                  <g id="Desktop-HD-dashboard" transform="translate(-70.000000, -531.000000)" stroke="#FFFEFA"
-                    stroke-width="2">
-                    <g id="users" transform="translate(0.000000, 503.000000)">
-                      <g id="Group" transform="translate(71.000000, 28.999900)">
-                        <path
-                          d="M22.688,50.255 L45.391,50.255 C45.391,50.255 45.391,41.848 44.196,38.246 C43.155,35.108 35.893,33.23 28,30.255 L28,24.255 C28,24.255 31.521,22.215 31.521,16.212 C33.494,16.212 33.494,11.168 31.521,11.168 C31.521,10.578 33.611,6.935 32.782,3.603 C31.588,-1.201 17.585,-1.201 16.391,3.603 C10.418,2.401 13.87,10.363 13.87,11.168 C11.895,11.168 11.895,16.212 13.87,16.212 C13.87,22.215 18,24.255 18,24.255 L18,30.255 C10.994,32.916 2.233,35.108 1.194,38.246 C-1.88293825e-13,41.848 -1.88293825e-13,50.255 -1.88293825e-13,50.255 L22.688,50.255 Z"
-                          id="Stroke-1"></path>
-                        <path
-                          d="M52.9561,50.255 L58.0001,50.255 C58.0001,50.255 58.0001,41.848 56.8051,38.246 C55.7641,35.108 47.8931,32.23 40.0001,29.255 L40.0001,25.255 C40.0001,25.255 44.1301,23.476 44.1301,17.472 C46.1021,17.472 46.1021,12.429 44.1301,12.429 C44.1301,11.838 46.2201,7.734 45.3911,4.4 C44.8321,2.153 40.3481,-1.441 36.5651,1.081"
-                          id="Stroke-3" stroke-linecap="round"></path>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
+              {{> usersSVG }}
               Users</a></li>
         </ul>
         <ul class="menu">
-          <li><a href="/"><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Desktop-HD-dashboard" transform="translate(-25.000000, -965.000000)" fill="#FFFEFA">
-                    <g id="back-to" transform="translate(25.000000, 963.000000)">
-                      <polygon id="Shape"
-                        transform="translate(8.000000, 10.000000) scale(-1, 1) translate(-8.000000, -10.000000) "
-                        points="8 2 6.6 3.4 12.2 9 0 9 0 11 12.2 11 6.6 16.6 8 18 16 10"></polygon>
-                    </g>
-                  </g>
-                </g>
-              </svg> Back to website</a></li>
+          <li><a href="/"><i class="fas fa-arrow-left"></i> Back to website</a></li>
         </ul>
         <div class="hamburger-menu">
           <span></span>

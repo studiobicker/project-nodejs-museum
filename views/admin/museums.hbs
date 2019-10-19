@@ -1,0 +1,31 @@
+<main class="site-main">
+  <div class="container padding">
+    <h1 class="section-title">{{title}}</h1>
+  </div>
+
+  <div class="container padding">
+    <div class="crud-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Museum</th>
+            <th><i class="far fa-comment"></i></th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each museums}}
+          <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.reviews.length}}</td>
+            <td><a href="/admin/museums/{{this.id}}"><i class="far fa-edit"></i></a> <a
+                href="/admin/museum/remove/{{this.id}}"><i class="far fa-trash-alt"></a></i>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>

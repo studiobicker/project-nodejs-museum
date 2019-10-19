@@ -168,45 +168,12 @@ table {
 
 @import "sitefooter";
 
-/* Grid
+@import "gridlist";
+
+/* Content
 --------------------------------------------- */
-.grid-list {
-  margin-left: -15px;
-  margin-right: -15px;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  width: 100%;
-}
-.grid-list li.grid-item {
-  flex: 0 1 33.33333%;
-  display: flex;
-}
-
-.grid-content {
-  margin: 15px;
-  background: $color__background-alternate;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.grid-content-link {
-  cursor: pointer;
-}
-.grid-content-link:hover {
-  background-color: $color__background-highlight;
-}
-
-.grid-image img {
-  display: block;
-  height: 225px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.grid-item .grid-details {
-  padding: 15px;
-  font-size: 16px;
+.content {
+  max-width: 680px;
 }
 
 .review-header {
@@ -247,30 +214,6 @@ table {
 .review-action a {
   font-weight: 700;
   padding: 0 5px;
-}
-
-/* List
---------------------------------------------- */
-
-.list {
-  list-style: none;
-}
-
-.list .list-item {
-  background-color: $color__background-alternate;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.list-item .list-image {
-  flex: 0 1 40%;
-}
-.list-item .list-details {
-  flex: 0 1 60%;
-}
-
-.list-image img {
-  display: block;
 }
 
 /* Index
@@ -472,6 +415,9 @@ ul.website li a {
 
 /* My list
 --------------------------------------------- */
+.my-list #map {
+  height: 400px;
+}
 .my-list__actions {
   display: flex;
   justify-content: flex-start;
@@ -495,11 +441,8 @@ ul.website li a {
 .my-list__icon:hover {
   background: $color__background-dark;
 }
-.my-list__icon:hover svg {
-  fill: $color__text-light;
-}
-.my-list__icon svg {
-  width: 20px;
+.my-list__icon:hover i {
+  color: $color__text-light;
 }
 
 .my-list__icon.count {
